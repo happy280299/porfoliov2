@@ -1,0 +1,15 @@
+@import "tailwindcss";
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  background-color: #0a0a0a;
+  overflow-x: hidden;
+}
+.wrapper {
+  max-width: 1240px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
