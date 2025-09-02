@@ -13,21 +13,16 @@ jobs:
       deployments: write
     environment: production
     steps:
-      - uses: actions/checkout@v4
-      - name: Setup nodejs
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: "20"
+          cache: "yarn"
 
-      - name: Install packages
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
 
       - name: Build static site
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: build
+        run: yarn build
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
