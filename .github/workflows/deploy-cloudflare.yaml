@@ -12,6 +12,7 @@ jobs:
       contents: read
       deployments: write
     environment: production
+
     steps:
       - uses: actions/checkout@v4
       - name: Setup nodejs
