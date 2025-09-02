@@ -1,5 +1,4 @@
 import qs from "query-string";
-import { Anonymous } from "src/@types/common";
 
 const arrayFormat = "none";
 
