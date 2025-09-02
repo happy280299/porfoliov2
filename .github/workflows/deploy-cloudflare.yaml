@@ -19,8 +19,6 @@ jobs:
         with:
           node-version: 18
 
-      - run: npm run hls ./public/assets/video
-
       - name: Install packages
         uses: borales/actions-yarn@v4
         with:
