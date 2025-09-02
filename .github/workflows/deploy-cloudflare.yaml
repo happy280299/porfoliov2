@@ -19,8 +19,15 @@ jobs:
         with:
           node-version: 20
 
-      - run: npm install
-      - run: npm run build
+      - name: Install packages
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+
+      - name: Build static site
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
